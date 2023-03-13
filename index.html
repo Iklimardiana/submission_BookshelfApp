@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1><i class="fas fa fa-book"></i> Bookshelf App <i class="fas fa fa-book"></i></h1>
+        </div>
+    </header>
+    <main>
+        <div class="container-book">
+            <section class="container-form">
+                <div class="add-book">
+                    <form id="input-book">
+                        <h2>Masukkan Buku Baru</h2>
+                        <div class="input">
+                            <label for="inputBookTitle">Judul</label>
+                            <input id="inputBookTitle" type="text" placeholder="Insert Title Book" required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookAuthor">Penulis</label>
+                            <input id="inputBookAuthor" type="text" placeholder="Insert Author Book" required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookYear">Tahun</label>
+                            <input id="inputBookYear" type="number" placeholder="Insert Publication Year" required>
+                        </div>
+                        <div class="input_inline">
+                            <label for="inputBookIsComplete">Selesai dibaca</label>
+                            <input id="inputBookIsComplete" type="checkbox">
+                        </div>
+                          <button class="submit-btn" id="bookSubmit" type="submit">Simpan</button>
+                    </form>
+                </div>
+            </section>
+            <section class="container-search">
+                <div class="book-info">
+                    <form class="search" id="searchForm">
+                        <h2>Cari Buku</h2>
+                        <div>
+                            <input type="text" id="keyword" placeholder="Search Book by Title">
+                            <button type="submit" id="searchItem"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                    <div class="totalbook">
+                        <section class="totals">
+                            <p>Belum Dibaca</p>
+                            <p id="count_unRead">0</p>
+                        </section>
+                        <section class="totals">
+                            <p>Jumlah Buku</p>
+                            <p id="count_allBook">0</p>
+                        </section>
+                        <section class="totals">
+                            <p>Sudah Dibaca</p>
+                            <p id="count_hasRead">0</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container-list">
+            <section class="book_shelf">
+                <h2>Belum selesai dibaca</h2>
+                <div id="incompleteBookshelfList">
+
+                </div>
+            </section>
+            <section class="book_shelf">
+                <h2>Selesai dibaca</h2>
+                <div id="completeBookshelfList">
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
